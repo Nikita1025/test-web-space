@@ -5,7 +5,7 @@ import s from './images.module.scss'
 export const Images = () => {
   const [images, setImages] = useState<DataType[]>([])
   const token =
-    'IGQWRNQ3IwRThmWG1KXzl2ZA2FBM3d0eGNiZAzBhdXhaVGVlcGY5T0ZAkaG1BazZAQazNLTlR3M3BpWERCTUtKV1R6X0JjZAC05NmJ2eHZAFWWtqd2RMbmZAnRHFITnpLY1R5aldGVU1YMUFPcWRxWmJNeThVUDRySkVLY0UZD'
+    'IGQWROQjlyck90SXM1dFJtTDNSamJHOUItczFSVFVfYTJHb2xrdkVUdHVTaW1jVHRkeXh0S010N3NoanowUGhPenBzUERZATURJcm91ZA2pvWVJtdUNEd0QwTFUwRHZAXQ0ctYmlQTGtrcUljM1ZAndWdOU3VLMXVTOXMZD'
 
   useEffect(() => {
     const fetchData = async () => {

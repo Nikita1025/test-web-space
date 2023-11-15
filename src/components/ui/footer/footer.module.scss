@@ -1,0 +1,39 @@
+@import 'src/styles/colors';
+@import 'src/styles/typography';
+@import 'src/styles/mixins';
+
+.container {
+  display: flex;
+  gap: 168px;
+  padding: 58px 0 108px 315px;
+  background-color: $color-dark-900;
+
+  .info_container {
+    .title {
+      @include typography($fs: $font-size-m, $lh: $line-height-m, $fw: $font-weight-regular);
+
+      margin-bottom: 20px;
+      color: $color-light-100;
+    }
+
+    .info {
+      @include typography($fs: $font-size-sm, $lh: $line-height-m, $fw: $font-weight-h3-large);
+
+      color: $color-light-100;
+
+      @media screen and (width <= 768px) {
+        @include typography($fs: $font-size-m, $lh: $line-height-m, $fw: $font-weight-h3-large);
+      }
+    }
+  }
+
+  @media screen and (width <= 768px) {
+    gap: 40px;
+    padding: 25px;
+  }
+
+  @media screen and (width <= 992px) and (width >= 768px) {
+    gap: 50px;
+    padding: 24px 0 25px 115px;
+  }
+}

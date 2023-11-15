@@ -1,0 +1,119 @@
+@import 'src/styles/colors';
+@import 'src/styles/mixins';
+@import 'src/styles/typography';
+
+.sliders {
+  width: 800px;
+  height: 372px;
+  margin-bottom: 146px;
+  box-shadow: 0 4px 4px 4px rgb(0 0 0 / 25%);
+
+  .slider {
+    height: 372px;
+
+    .slider_container {
+      display: flex;
+      flex-direction: column;
+
+      .big_info {
+        display: flex;
+        gap: 98px;
+        margin: 13px 0 0 33px;
+
+        .value {
+          @include typography(
+            $fs: $font-size-xxxl,
+            $lh: $line-height-xl,
+            $fw: $font-weight-xx-bold
+          );
+
+          font-family: Nunito, sans-serif;
+          color: $color-light-700;
+
+          @media screen and (width <= 768px) {
+            @include typography($fs: $font-size-xl, $lh: $line-height-l, $fw: $font-weight-xx-bold);
+          }
+
+          @media screen and (width <= 992px) and (width >= 768px) {
+            @include typography(
+              $fs: $font-size-xxl,
+              $lh: $line-height-l,
+              $fw: $font-weight-xx-bold
+            );
+          }
+        }
+
+        @media screen and (width <= 768px) {
+          gap: 25px;
+          margin: 10px 0 20px 20px;
+        }
+      }
+
+      .text_box {
+        display: flex;
+        flex-direction: column;
+        margin-top: 39px;
+
+        .title {
+          @include typography($fs: $font-size-l, $lh: $line-height-m, $fw: $font-weight-h3-large);
+
+          margin-bottom: 28px;
+        }
+
+        .text_info {
+          @include typography($fs: $font-size-m, $lh: $line-height-m, $fw: $font-weight-h3-large);
+        }
+      }
+
+      .text_value {
+        @include typography($fs: $font-size-xxl, $lh: $line-height-l, $fw: $font-weight-xx-bold);
+
+        margin: 0 0 10px 33px;
+        color: $color-light-700;
+
+        @media screen and (width <= 768px) {
+          @include typography($fs: $font-size-ll, $lh: $line-height-m, $fw: $font-weight-xx-bold);
+
+          margin: 10px 0 20px 20px;
+        }
+
+        @media screen and (width <= 992px) and (width >= 768px) {
+          @include typography($fs: $font-size-xl, $lh: $line-height-m, $fw: $font-weight-xx-bold);
+
+          margin: 20px 0 30px 30px;
+        }
+      }
+    }
+  }
+
+  @media screen and (width <= 768px) {
+    width: 340px;
+    height: 372px;
+    margin-bottom: 90px;
+  }
+
+  @media screen and (width <= 992px) and (width >= 768px) {
+    width: 700px;
+    height: 372px;
+  }
+}
+
+.dots {
+  top: 31%;
+  right: -6%;
+  width: 40px;
+  height: 40px;
+
+  li button::before {
+    font-size: 18px;
+  }
+
+  @media screen and (width <= 768px) {
+    top: unset;
+    right: -8px;
+    bottom: 12%;
+
+    width: 40px;
+    height: 40px;
+  }
+}

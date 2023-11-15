@@ -1,0 +1,10 @@
+@import 'src/styles/colors';
+@import 'src/styles/typography';
+@import 'src/styles/mixins';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 101px;
+}

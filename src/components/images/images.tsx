@@ -24,7 +24,7 @@ export const Images = () => {
       <div className={s.image_box}>
         {images?.map(el => (
           <div className={s.image_container}>
-            <img className={s.image} src={el.media_url} />
+            <img className={s.image} src={el.media_url} alt="image" />
             <p className={s.text_overlay}>
               пишите ваши вопросы в комментарии <br /> 👇👇👇
             </p>

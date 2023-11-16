@@ -4,8 +4,7 @@ import { DataType } from '@/utils/types'
 import s from './images.module.scss'
 export const Images = () => {
   const [images, setImages] = useState<DataType[]>([])
-  const token =
-    'IGQWRPczBUclp0U1NmQ0pDSENNV1ZAfX00wcUhtUmlRYVRCTlc1T0tUZAHBYM2N5ZAHh0Rnh4SXFlRi1lZAkVLSFRLVDlGdGNOTS16MlNURDk4VWdsQXB4bE5iS2tMby0wcFlMbjhxYk5IT3ZA4b0RTUVZACSmk4WjhDTmsZD'
+  const token = process.env.USER_TOKEN
 
   useEffect(() => {
     const fetchData = async () => {
